@@ -1,21 +1,23 @@
 ## Website Performance Optimization portfolio project
 
-How to run the website:
+####How to run the website:
 This website is posted on github.
 The url is: https://sunyoungsh.github.io/FEND-WebOptimization/.
 
-How index.html is optimized:
-- style.css inlined to avoid render-blocking css
-- async attribute included in <script> to remove render-blocking js
-- minified print.css
-- optimized images: reduced sizes
-The website scored 91 for mobile and 93 for desktop version on PageSpeed Insights. (https://developers.google.com/speed/pagespeed/insights/)
+####How index.html is optimized:
+* style.css inlined to avoid render-blocking css
+* async attribute included in <script> to remove render-blocking js
+* minified print.css
+* optimized images: reduced sizes
+The website scored 91 for mobile and 93 for desktop version on [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
 
-How pizza.html & main.js are optimized:
-- updatePositions function (line 510) has been modified to make the scrolling smoother.
-- changePizzaSizes function (line 451) has been modified to reduce the time needed to responde for slider.
+####How pizza.html & main.js are optimized:
+* updatePositions function (line 510) has been modified to make the scrolling smoother.
+* changePizzaSizes function (line 451) has been modified to reduce the time needed to responde for slider.
 In both cases, variables inside for-loops that required the browser to acess style have been taken out of the loop, so that the browser only needs to access them once, instead of every time the loops run.
------------------------------------------------------------------------------------------------------------------------------------
+
+---
+
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
 To get started, check out the repository and inspect the code.
