@@ -459,6 +459,8 @@ var resizePizzas = function(size) {
       case "3":
         newwidth = 50;
     }
+    // document.querySelectorAll(".randomPizzaContainer") has been taken out of the for-loop and is saved inside a variable.
+    // By doing this, we can reduce the workload on the browser.
     var randomPizza = document.querySelectorAll(".randomPizzaContainer");
     for (var i = 0; i < randomPizza.length; i++) {
         randomPizza[i].style.width = newwidth + "%";
@@ -510,6 +512,7 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
+  // document.body.scrollTop has been taken out of the for-loop to reduce workload.
   var scroll = document.body.scrollTop;
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((scroll / 1250) + (i % 5));
